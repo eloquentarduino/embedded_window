@@ -127,10 +127,11 @@ class Window:
                         // second-order features
                         for (uint16_t i = j; i < {{ size }}; i += {{ num_features }}) {
                             float xi = queue[i];
+                            float x0 = xi - mean;
 
-                            std += (xi - mean) * (xi - mean);
+                            std += x0 * x0;
 
-                            if (xi > mean) count_above_mean += 1;
+                            if (x0 > 0) count_above_mean += 1;
                             else count_below_mean += 1;
                         }
 
@@ -154,6 +155,13 @@ class Window:
                     head -= {{ shift }};
 
                     return true;
+                 }
+
+                 /**
+                  * Clear the current data of the window
+                  */
+                 void clear() {
+                    head = 0;
                  }
 
             protected:

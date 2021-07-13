@@ -6,13 +6,13 @@ from os.path import isdir
 setup(
   name = 'embedded_window',
   packages = ['embedded_window'],
-  version = '0.0.1',
+  version = '0.0.2',
   license='MIT',
   description = 'A sliding window that exports to C++',
   author = 'Simone Salerno',
   author_email = 'eloquentarduino@gmail.com',
   url = 'https://github.com/eloquentarduino/embedded_window',
-  download_url = 'https://github.com/eloquentarduino/embedded_window/blob/master/dist/embedded_window-0.0.1.tar.gz?raw=true',
+  download_url = 'https://github.com/eloquentarduino/embedded_window/blob/master/dist/embedded_window-0.0.2.tar.gz?raw=true',
   keywords = [
     'ML',
     'microcontrollers',
